@@ -1,4 +1,4 @@
-package br.com.convergeti.carga;
+package br.com.convergeti.guarulhos;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -35,7 +35,7 @@ public class CargaMargem extends Operacao {
 			String orgaoExp       = stringToDb(getSubLayout2(line, 44, 4));
 			String ufExp          = stringToDb(getSubLayout2(line, 48, 2));
 			String CPF            = stringToDb(getSubLayout(line, 50, 11));
-			String orgao          = stringToDb(getSubLayout(line, 61, 3));
+//			String orgao          = stringToDb(getSubLayout(line, 61, 3));
 			String matricula      = stringToDb(getSubLayout(line, 64, 11));
 			String dfuncao        = defaultChars(stringToDb(getSubLayout(line, 75, 15)));
 			String dataAdm        = stringToDb(dataToPostgreSQL(getSubLayout(line, 90, 8)));
@@ -49,9 +49,9 @@ public class CargaMargem extends Operacao {
 			String fone           = stringToDb(getSubLayout(line, 208, 8));
 			String dataNasc       = stringToDb(dataToPostgreSQL(getSubLayout(line, 216, 8)));
 			Integer estadoCivil   = Integer.parseInt(getSubLayout(line, 224, 1));
-			String tituloEleitNr  = stringToDb(getSubLayout(line, 225, 12));
-			String tituloEleitZn  = stringToDb(getSubLayout(line, 237, 3));
-			String tituloEleitSes = stringToDb(getSubLayout(line, 240, 4));
+//			String tituloEleitNr  = stringToDb(getSubLayout(line, 225, 12));
+//			String tituloEleitZn  = stringToDb(getSubLayout(line, 237, 3));
+//			String tituloEleitSes = stringToDb(getSubLayout(line, 240, 4));
 			Integer sexo          = (getSubLayout(line, 244, 1).equals("M"))?1:2;
 			Integer grauInstr     = Integer.parseInt(getSubLayout(line, 245, 1));
 			BigDecimal valorMargem    = new BigDecimal(getSubLayout(line, 246, 11)).divide(dez, 2, RoundingMode.HALF_EVEN);
